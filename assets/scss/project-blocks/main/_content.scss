@@ -1,0 +1,21 @@
+.device-image{
+height: 84px;
+}
+// класс для блока карточки товара
+.item-wrapper{
+  border: 1px solid black;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+// клас для блока кнопок на карточках товара
+.item-actions {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  &__more,
+  &__cart{
+    width: 150px;
+    height: 35px;
+  }
+}

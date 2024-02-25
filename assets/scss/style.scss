@@ -1,0 +1,11 @@
+// @use "../../libs/normalize.css/normalize";
+
+@use "../scss/project-blocks/commons/commons";
+@use "../scss/project-blocks/header/header";
+
+
+
+// стили блока main
+
+@use "../scss/project-blocks/main/page-pagination";
+@use "../scss/project-blocks/main/content";

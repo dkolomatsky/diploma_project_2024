@@ -1,0 +1,50 @@
+.d-block
+{
+    height: 400px;
+}
+
+.page-pagination
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.device-image
+{
+    height: 84px;
+}
+
+.item-wrapper
+{
+    margin-bottom: 10px;
+    padding: 5px;
+
+    border: 1px solid black;
+}
+
+.item-actions
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
+
+    gap: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.item-actions__more,
+.item-actions__cart
+{
+    width: 150px;
+    height: 35px;
+}
