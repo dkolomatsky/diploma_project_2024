@@ -1,4 +1,4 @@
-// body {
-//   background-image: url(../img/patt.png);
-//   background-position: 50% 0;
-// }
+@use "../commons/variables" as *;
+body {
+  background-color: $color-light;
+}
