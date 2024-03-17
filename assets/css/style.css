@@ -265,6 +265,7 @@ body
 
 .device-image
 {
+    width: 90px;
     height: 84px;
 }
 
@@ -296,6 +297,30 @@ body
 {
     width: 150px;
     height: 35px;
+}
+
+.display-hidden
+{
+    display: none;
+}
+
+.pageCards
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    gap: 10px;
+}
+
+.hidden-option
+{
+    display: none;
+}
+
+.show-more
+{
+    display: block;
 }
 
 .page-footer

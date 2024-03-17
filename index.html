@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+  <!-- верхний блок -->
   <div class="page-header">
     <div class="page-header__navbar">
       <div class="container">
@@ -45,7 +45,7 @@
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Accessories</a></li>
+                    <li><a class="dropdown-item" href="#">LapTops&Tablets</a></li>
                   </ul>
                 </li>
               </ul>
@@ -98,10 +98,186 @@
       </div>
     </div>
   </div>
-
-  <div class="container">
+  <!-- основной блок -->
+  <div class="container main-block">
     <div class="row">
+      <aside class="col-lg-3 order-lg-1 sidebar">
 
+        <div class="container-fluid sidebar-filter">
+
+          <form>
+            <fieldset class="form-group">
+              <legend>Device type</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt1" id="opt1" value="opt1">
+                <label class="form-check-label" for="opt1">
+                  Laptop
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt2" id="opt2" value="opt2">
+                <label class="form-check-label" for="opt2">
+                  Tablet
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>Color</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt3" id="opt3" value="opt3">
+                <label class="form-check-label" for="opt3">
+                  Black
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt4" id="opt4" value="opt4">
+                <label class="form-check-label" for="opt4">
+                  Red
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt5" id="opt5" value="opt5">
+                <label class="form-check-label" for="opt5">
+                  Green
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt6" id="opt6" value="opt6">
+                <label class="form-check-label" for="opt6">
+                  Blue
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt7" id="opt7" value="opt7">
+                <label class="form-check-label" for="opt7">
+                  Orange
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>RAM:</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt8" id="opt8" value="opt8">
+                <label class="form-check-label" for="opt8">
+                  4GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt9" id="opt9" value="opt9">
+                <label class="form-check-label" for="opt9">
+                  8GB
+                </label>
+              </div>
+            </fieldset>
+            <!-- блок который будет появляться после нажатия на  Show more options...-->
+            <fieldset class="form-group extra-option">
+              <legend>Brand:</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt10" id="opt10" value="opt10">
+                <label class="form-check-label" for="opt10">
+                  Apple
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt11" id="opt11" value="opt11">
+                <label class="form-check-label" for="opt11">
+                  Samsung
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt12" id="opt12" value="opt12">
+                <label class="form-check-label" for="opt12">
+                  Lenovo
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="opt13" id="opt13" value="opt13">
+                <label class="form-check-label" for="opt13">
+                  Huawei
+                </label>
+              </div>
+            </fieldset>
+
+            <a href="#" class="sidebar-filter__more show-option">Show more options...</a>
+            <a href="#" class="sidebar-filter__more close-option ">Close extra options...</a>
+          </form>
+          <button type="submit" class="btn btn-primary btn-block sidebar-filter__submit">Submit</button>
+        </div>
+
+      </aside>
+
+      <main class="col-lg-9 order-lg-2 page-main">
+
+        <div class="row page-title">
+          <div class="col-md-8">
+            <h1 class="page-title__header">Laptops and Tablets</h1>
+          </div>
+          <div class="col-md-4">
+            <select name="filter" id="page-title__filter" class="page-title__filter">
+              <option value="sv1">sort by price</option>
+              <option value="sv1">sort by name</option>
+              <option value="sv2">sort by date</option>
+              <option value="sv3">sort by popularity</option>
+            </select>
+          </div>
+        </div>
+        <!-- блок для карточек товара -->
+        <div class="row page-content content-grid" id="content-container"></div>
+        <div class="page-pagination">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#" data-page="1">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+            </ul>
+          </nav>
+        </div>
+      </main>
+    </div>
+  </div>
+  <!-- блок корзина -->
+  <div class=" cart-container" style="display: none;">
+    <div class="container"></div>
+    <div class="cart-name">Корзина</div>
+    <form></form>
+    <div class="clientOrder">
+      <span>Ваши товары:</span>
+    </div>
+  </div>
+  </div>
+  <!-- нижний блок -->
+  <footer class="py-3 my-4 page-footer">
+    <div class="container">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Products</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2024 Dmytro Kolomatskyi, UA</p>
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/ce3d69e133.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/main.js" type="module"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!-- 
+  <div class="container main-block">
+    <div class="row">
       <aside class="col-lg-3 order-lg-1 sidebar">
 
         <div class="container-fluid sidebar-filter">
@@ -162,31 +338,19 @@
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="opt8" id="opt8" value="opt8" checked>
                 <label class="form-check-label" for="opt8">
-                  1GB
+                  4GB
                 </label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="opt9" id="opt9" value="opt9">
                 <label class="form-check-label" for="opt9">
-                  2GB
+                  8GB
                 </label>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="opt10" id="opt10" value="opt10">
                 <label class="form-check-label" for="opt10">
-                  4GB
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="opt11" id="opt11" value="opt11">
-                <label class="form-check-label" for="opt11">
-                  6GB
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="opt12" id="opt12" value="opt12">
-                <label class="form-check-label" for="opt12">
-                  8GB
+                  16GB
                 </label>
               </div>
             </fieldset>
@@ -223,378 +387,353 @@
         </div>
 
         <div class="row page-content content-grid" id="content-container">
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-17.png" alt="">
+          первый блок
+          <div class="pageCards">
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image"
+                    src="https://img01.huaweifile.com/eu/cz/huawei/pms/uomcdn/CZ_HW_B2C/pms/202401/gbom/6942103112584/800_800_A5436E73B567EC365C8EE15287C9C118mp.png"
+                    alt="huawei">
+                </div>
+                <div class="container-fluid">
+                  <h2 class="item-title">HUAWEI MateBook D 16 2024</h2>
+                  <div class="item-description">
+                    HUAWEI MateBook D 16 2024 Windows 11 Home/Intel i5-12450H/8GB/512GB SSD
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Laptop</span>
+                    <span><strong>SCREEN SIZE:</strong> 16 inches</span>
+                    <span><strong>RAM:</strong> 8 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$599 <sup>25</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#1 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="https://image.alza.cz/products/NT187h31j2b/NT187h31j2b.jpg?"
+                    alt="lenovo">
                 </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
+                <div class="container-fluid">
+                  <h2 class="item-title">Lenovo ThinkBook 16 G4+ IAP</h2>
+                  <div class="item-description">
+                    Intel Core i5 1235U Alder Lake, 16" IPS antireflexní 1920 × 1200, RAM 16GB LPDDR5, Intel Iris Xe
+                    Graphics, SSD 512GB
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Laptop</span>
+                    <span><strong>SCREEN SIZE:</strong> 16 inches</span>
+                    <span><strong>RAM:</strong> 16 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$1250 <sup>99</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
+              </div>
+            </div>
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="https://image.alza.cz/products/SATA1036c1/SATA1036c1.jpg?"
+                    alt="Samsung">
                 </div>
-                <div class="item-price">$599 <sup>25</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
+                <div class="container-fluid">
+                  <h2 class="item-title">Samsung Galaxy Tab A9</h2>
+                  <div class="item-description">
+                    Tablet - displej 11" Full HD 1920 × 1200 TFT, Qualcomm SM6375 2,2 GHz, RAM 8 GB
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Tablets</span>
+                    <span><strong>SCREEN SIZE:</strong> 11 inches</span>
+                    <span><strong>RAM:</strong> 8 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$399 <sup>50</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-9.png" alt="">
+          второй блок
+          <div class="pageCards">
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="assets/img/icon-2.png" alt="huawei">
+                </div>
+                <div class="container-fluid">
+                  <h2 class="item-title">HUAWEI MateBook D 16 2024</h2>
+                  <div class="item-description">
+                    HUAWEI MateBook D 16 2024 Windows 11 Home/Intel i5-12450H/8GB/512GB SSD
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Laptop</span>
+                    <span><strong>SCREEN SIZE:</strong> 16 inches</span>
+                    <span><strong>RAM:</strong> 8 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$599 <sup>25</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#2 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </div>
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="https://image.alza.cz/products/NT187h31j2b/NT187h31j2b.jpg?"
+                    alt="lenovo">
                 </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
+                <div class="container-fluid">
+                  <h2 class="item-title">Lenovo ThinkBook 16 G4+ IAP</h2>
+                  <div class="item-description">
+                    Intel Core i5 1235U Alder Lake, 16" IPS antireflexní 1920 × 1200, RAM 16GB LPDDR5, Intel Iris Xe
+                    Graphics, SSD 512GB
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Laptop</span>
+                    <span><strong>SCREEN SIZE:</strong> 16 inches</span>
+                    <span><strong>RAM:</strong> 16 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$1250 <sup>99</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
+              </div>
+            </div>
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="https://image.alza.cz/products/SATA1036c1/SATA1036c1.jpg?"
+                    alt="Samsung">
                 </div>
-                <div class="item-price">$1250 <sup>99</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
+                <div class="container-fluid">
+                  <h2 class="item-title">Samsung Galaxy Tab A9</h2>
+                  <div class="item-description">
+                    Tablet - displej 11" Full HD 1920 × 1200 TFT, Qualcomm SM6375 2,2 GHz, RAM 8 GB
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Tablets</span>
+                    <span><strong>SCREEN SIZE:</strong> 11 inches</span>
+                    <span><strong>RAM:</strong> 8 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$399 <sup>50</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-10.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#3 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          третий блок
+          <div class="pageCards">
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image"
+                    src="https://img01.huaweifile.com/eu/cz/huawei/pms/uomcdn/CZ_HW_B2C/pms/202401/gbom/6942103112584/800_800_A5436E73B567EC365C8EE15287C9C118mp.png"
+                    alt="huawei">
                 </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$399 <sup>50</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-17.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#1 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$599 <sup>25</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
+                <div class="container-fluid">
+                  <h2 class="item-title">HUAWEI MateBook D 16 2024</h2>
+                  <div class="item-description">
+                    HUAWEI MateBook D 16 2024 Windows 11 Home/Intel i5-12450H/8GB/512GB SSD
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Laptop</span>
+                    <span><strong>SCREEN SIZE:</strong> 16 inches</span>
+                    <span><strong>RAM:</strong> 8 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$599 <sup>25</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-9.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#2 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="" alt="lenovo">
                 </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$1250 <sup>99</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-10.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#3 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$399 <sup>50</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
+                <div class="container-fluid">
+                  <h2 class="item-title">Lenovo ThinkBook 16 G4+ IAP</h2>
+                  <div class="item-description">
+                    Intel Core i5 1235U Alder Lake, 16" IPS antireflexní 1920 × 1200, RAM 16GB LPDDR5, Intel Iris Xe
+                    Graphics, SSD 512GB
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Laptop</span>
+                    <span><strong>SCREEN SIZE:</strong> 16 inches</span>
+                    <span><strong>RAM:</strong> 16 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$1250 <sup>99</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-17.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#1 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            <div class="col-md-4 content-item">
+              <div class="item-wrapper">
+                <div class="item-image">
+                  <img class="device-image" src="https://image.alza.cz/products/SATA1036c1/SATA1036c1.jpg?"
+                    alt="Samsung">
                 </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$599 <sup>25</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-9.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#2 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$1250 <sup>99</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 content-item">
-            <div class="item-wrapper">
-              <div class="item-image">
-                <img class="device-image" src="assets/img/icon-10.png" alt="">
-              </div>
-              <div class="container-fluid">
-                <h2 class="item-title">#3 Device Name</h2>
-                <div class="item-description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </div>
-                <div class="item-characteristics">
-                  <span><strong>TYPE:</strong> Laptop</span>
-                  <span><strong>SCREEN SIZE:</strong> 7 inches</span>
-                  <span><strong>RAM:</strong> 1 GB</span>
-                </div>
-                <div class="item-buttons">
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
-                  </button>
-                  <button class="btn btn-outline-success my-2 my-sm-0">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                  </button>
-                </div>
-                <div class="item-price">$399 <sup>50</sup></div>
-                <div class="item-actions">
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
-                    More details
-                  </button>
-                  <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
-                    Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                  </button>
+                <div class="container-fluid">
+                  <h2 class="item-title">Samsung Galaxy Tab A9</h2>
+                  <div class="item-description">
+                    Tablet - displej 11" Full HD 1920 × 1200 TFT, Qualcomm SM6375 2,2 GHz, RAM 8 GB
+                  </div>
+                  <div class="item-characteristics">
+                    <span><strong>TYPE:</strong> Tablets</span>
+                    <span><strong>SCREEN SIZE:</strong> 11 inches</span>
+                    <span><strong>RAM:</strong> 8 GB</span>
+                  </div>
+                  <div class="item-buttons">
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn btn-outline-success my-2 my-sm-0">
+                      <i class="fas fa-heart" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <div class="item-price">$399 <sup>50</sup></div>
+                  <div class="item-actions">
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
+                      More details
+                    </button>
+                    <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__cart">
+                      Add to cart <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="page-pagination">
           <nav aria-label="Page navigation example">
             <ul class="pagination">
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
+              <li class="page-item"><a class="page-link" href="#" data-page="1">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+              <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
             </ul>
           </nav>
         </div>
-
       </main>
     </div>
   </div>
-
-
-
-  <footer class="py-3 my-4 page-footer">
-    <div class="container">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Products</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-      </ul>
-      <p class="text-center text-body-secondary">© 2024 Dmytro Kolomatskyi, UA</p>
-    </div>
-  </footer>
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://kit.fontawesome.com/ce3d69e133.js" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+ -->

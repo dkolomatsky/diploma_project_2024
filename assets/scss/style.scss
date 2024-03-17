@@ -11,5 +11,8 @@
 @use "../scss/project-blocks/main/page-pagination";
 @use "../scss/project-blocks/main/content";
 
+// стили блока aside
+@use "../scss/project-blocks/aside/aside.scss";
+
 // стили блока footer
 @use "../scss/project-blocks/footer/footer"
