@@ -11,19 +11,19 @@ const products = [
     price: 799,
     color: "Black",
   },
-   // unit 2
+  // unit 2
   {
     type: "Laptop",
-    brand: "Apple",
-    model: "iPhone 12",
-    memory: "4GB",
+    brand: "Huawei",
+    model: "HUAWEI MateBook 16s",
+    memory: "16GB",
     description:
-      "Powerful smartphone with high-resolution camera and fast processor.",
-    photo: "photo_link_2.jpg",
-    price: 999,
-    color: "Orange",
+      "Operating system Windows 11 Home Size Width 351 mm... Screen Size 16 inches... 13th Gen Intel® Core™ i9-13900H processor 13th Gen Intel® Core™ i7-13700H processor Intel® Iris® Xᵉ Graphics. Memory 16 GB 1 TB SSD NVMe PCIe storage. ...",
+    photo: "assets/img/huaweiMateBook16s.png",
+    price: 1499,
+    color: "Grey",
   },
-   // unit 3
+  // unit 3
   {
     type: "Laptop",
     brand: "Sony",
@@ -35,7 +35,7 @@ const products = [
     price: 499,
     color: "Red",
   },
-   // unit 4
+  // unit 4
   {
     type: "Tablet",
     brand: "Lenovo",
@@ -47,7 +47,7 @@ const products = [
     price: 329,
     color: "Black",
   },
-   // unit 5
+  // unit 5
   {
     type: "Tablet",
     brand: "Adidas",
@@ -59,7 +59,7 @@ const products = [
     price: 79,
     color: "Orange",
   },
-   // unit 6
+  // unit 6
   {
     type: "Tablet",
     brand: "LG",
@@ -71,7 +71,7 @@ const products = [
     price: 1499,
     color: "Black",
   },
-   // unit 7
+  // unit 7
   {
     type: "Laptop",
     brand: "Canon",
@@ -83,7 +83,7 @@ const products = [
     price: 2499,
     color: "Black",
   },
-   // unit 8
+  // unit 8
   {
     type: "Laptop",
     brand: "Lenovo",
@@ -95,7 +95,7 @@ const products = [
     price: 1499,
     color: "Orange",
   },
-   // unit 9
+  // unit 9
   {
     type: "Laptop",
     brand: "Microsoft",
