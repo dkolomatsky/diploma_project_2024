@@ -15,7 +15,7 @@ const createProductCard = (product) => {
   card.innerHTML = `
     <div class="item-wrapper">
       <div class="item-image">
-        <img class="device-image" src="" alt="">
+        <img class="device-image" src="${product.photo}" alt="">
       </div>
       <div class="container-fluid">
         <h2 class="item-title">${product.brand}</h2>

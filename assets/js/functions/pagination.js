@@ -1,4 +1,5 @@
 // блок для работы с переключением страничек с карточками товаров
+
 import { products } from "../data/devices.js";
 import { createProductCard } from "../functions/cards.js";
 import { contentContainer } from "../functions/cards.js";

@@ -1,16 +1,19 @@
 const products = [
+  // unit 1
   {
-    type: "Laptop",
+    type: "Tablet",
     brand: "Samsung",
-    model: "Galaxy S20",
-    memory: "4GB",
-    description: "Smartphone with advanced technologies and high performance.",
-    photo: "photo_link_1.jpg",
+    model: "Samsung Galaxy Tab S9",
+    memory: "8GB",
+    description:
+      "Tablet - display: 11, QHD 2560 × 1600 AMOLED, Qualcomm Snapdragon 8 Gen 2 2,8 GHz, RAM: 8GB, internal memory: 256GB + memory card up to 1024GB, webcamera 13Mpx+ 12Mpx, weight: 498, USB-C, Android 13",
+    photo: "assets/img/Samsung-Galaxy_TABs9.png",
     price: 799,
     color: "Black",
   },
+   // unit 2
   {
-    type: "Tablet",
+    type: "Laptop",
     brand: "Apple",
     model: "iPhone 12",
     memory: "4GB",
@@ -20,29 +23,33 @@ const products = [
     price: 999,
     color: "Orange",
   },
+   // unit 3
   {
     type: "Laptop",
     brand: "Sony",
     model: "PlayStation 5",
-    memory: "4GB",
+    memory: "16GB",
     description:
       "Next-generation gaming console with high performance and wide functionality.",
     photo: "photo_link_3.jpg",
     price: 499,
     color: "Red",
   },
+   // unit 4
   {
     type: "Tablet",
-    brand: "Nike",
-    model: "Air Max 270",
+    brand: "Lenovo",
+    model: "Lenovo Tab M11 LTE",
     memory: "4GB",
-    description: "Comfortable sneakers for an active lifestyle.",
-    photo: "photo_link_4.jpg",
-    price: 129,
+    description:
+      "Tablet - display: 11, 1920 × 1200 IPS, MediaTek Helio G88 2 GHz, RAM: 4GB, internal memory: 128GB + memory card up to 1024GB, 4G/LTE, webcamera 8Mpx+ 8Mpx, weight: 465, USB-C, Android 13",
+    photo: "assets/img/lenovoTABm11.png",
+    price: 329,
     color: "Black",
   },
+   // unit 5
   {
-    type: "Laptop",
+    type: "Tablet",
     brand: "Adidas",
     model: "Superstar",
     memory: "4GB",
@@ -52,6 +59,7 @@ const products = [
     price: 79,
     color: "Orange",
   },
+   // unit 6
   {
     type: "Tablet",
     brand: "LG",
@@ -63,6 +71,7 @@ const products = [
     price: 1499,
     color: "Black",
   },
+   // unit 7
   {
     type: "Laptop",
     brand: "Canon",
@@ -74,6 +83,7 @@ const products = [
     price: 2499,
     color: "Black",
   },
+   // unit 8
   {
     type: "Laptop",
     brand: "Lenovo",
@@ -85,6 +95,7 @@ const products = [
     price: 1499,
     color: "Orange",
   },
+   // unit 9
   {
     type: "Laptop",
     brand: "Microsoft",
