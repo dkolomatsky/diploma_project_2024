@@ -39,3 +39,10 @@ gap: 10px;
 }
 
 
+@media(max-width: 460px){
+  .item-actions__cart,
+.item-actions__more {
+  width: 140px;
+  height: 30px;
+}
+}

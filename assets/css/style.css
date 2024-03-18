@@ -330,7 +330,6 @@ body
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
 }
-
 .hidden-option
 {
     display: none;
@@ -344,4 +343,14 @@ body
 .page-footer
 {
     background-color: rgba(255, 255, 255, .8);
+}
+
+@media (max-width: 460px)
+{
+    .item-actions__cart,
+    .item-actions__more
+    {
+        width: 140px;
+        height: 30px;
+    }
 }
