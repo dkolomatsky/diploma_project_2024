@@ -25,7 +25,7 @@ const createProductCard = (product) => {
           <span><strong>Color: </strong>${product.color}</span>
           <span><strong>RAM: </strong>${product.memory}</span>
         </div>
-        <div class="item-price"><strong>Price: </strpong>${product.price}<sup>00 </sup>$</div>
+        <div class="item-price"><strong>Price: </strpong>${product.price} $</div>
         <div class="item-actions">
           <button class="btn btn-block btn-outline-success my-2 my-sm-0 item-actions__more">
             More details

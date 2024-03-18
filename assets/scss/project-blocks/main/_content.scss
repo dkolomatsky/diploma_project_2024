@@ -28,5 +28,14 @@ width: 90px;
 display: flex;
 gap: 10px;
 }
+// блок самой карточки товара
+.item-wrapper{
+  height: 320px;
+  width: 300px;
+}
+.item-characteristics{
+  display: flex;
+  flex-direction: column;
+}
 
 
