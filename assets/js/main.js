@@ -4,6 +4,7 @@ import "./functions/showExtraOptions.js";
 import "./functions/addCardsToCart.js";
 import "./functions/getTotalPrice.js";
 import "./functions/showCart.js";
+import "./functions/searchProduct.js";
 
 /*
 ТЗ:
