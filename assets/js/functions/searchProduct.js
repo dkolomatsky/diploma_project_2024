@@ -1,35 +1,48 @@
 import { products } from "../data/devices.js";
 import { createProductCard } from "./cards.js";
 import { contentContainer } from "./cards.js";
-import { showAllProducts } from "./showAllProductCards.js";
+import { renderProducts } from "./pagination.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.querySelector("#search-input");
-  const searchButton = document.querySelector("#search-button");
+// Находим элементы формы поиска
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-button");
 
-  const searchProducts = (searchTerm) => {
-    if (searchTerm === "") {
-      showAllProducts();
-      return;
-    }
+// Обработчик события для кнопки поиска
+searchButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const searchValue = searchInput.value.trim().toLowerCase(); // Получаем значение из поля ввода и приводим к нижнему регистру
 
-    const searchTermLowercase = searchTerm.toLowerCase();
-
+  if (searchValue) {
+    // Если введено значение для поиска
     const filteredProducts = products.filter((product) => {
-      return Object.values(product).some((value) =>
-        value.toString().toLowerCase().includes(searchTermLowercase)
+      // Фильтруем карточки товаров, проверяя совпадение с введенным значением
+      return (
+        product.brand.toLowerCase().includes(searchValue) ||
+        product.type.toLowerCase().includes(searchValue) ||
+        product.color.toLowerCase().includes(searchValue) ||
+        product.memory.toLowerCase().includes(searchValue)
       );
     });
 
+    // Очищаем контейнер перед добавлением отфильтрованных карточек
     contentContainer.innerHTML = "";
 
-    filteredProducts.forEach((product) => {
-      const card = createProductCard(product);
-      contentContainer.append(card);
-    });
-  };
+    // делаем проверку если совпадений в поиске не найдено то вывдим сообщение или если найдено то отображаем их а если поле пустое то просто выводим карточки по умолчанию
+    if (filteredProducts.length === 0) {
+      const noResulstmassage = document.createElement("div");
 
-  searchButton.addEventListener("click", () => {
-    searchProducts(searchInput.value.trim());
-  });
+      noResulstmassage.textContent = "По данному запросу ничего не найдено";
+      noResulstmassage.classList.add("noResulstmassage");
+      contentContainer.append(noResulstmassage);
+    } else {
+      // Отображаем отфильтрованные карточки товаров
+      filteredProducts.forEach((product) => {
+        const card = createProductCard(product);
+        contentContainer.append(card);
+      });
+    }
+  } else {
+    // Если поле ввода пустое, отображаем первые 9 карточек
+    renderProducts(1);
+  }
 });

@@ -38,6 +38,16 @@ gap: 10px;
   flex-direction: column;
 }
 
+// блок сообщения если по поиску не нашли ничего
+.noResulstmassage{
+  border: 1px solid black;
+  height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
 
 @media(max-width: 460px){
   .item-actions__cart,

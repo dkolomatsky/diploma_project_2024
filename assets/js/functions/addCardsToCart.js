@@ -1,36 +1,38 @@
-const cartCounterElement = document.getElementById("cart-counter-label");
-const addToCartButtons = document.querySelectorAll(".item-actions__cart");
+// const cartCounterElement = document.getElementById("cart-counter-label");
+// const addToCartButtons = document.querySelectorAll(".item-actions__cart");
 
-let cartCounter = 0;
+// let cartCounter = 0;
 
-const updateCartCounter = () => {
-  cartCounter++;
-  cartCounterElement.textContent = cartCounter;
-};
+// const updateCartCounter = () => {
+//   cartCounter++;
+//   cartCounterElement.textContent = cartCounter;
+// };
 
-// Функция для обновления содержимого блока clientOrder
-const updateClientOrder = (productName, productPrice) => {
-  const clientOrderElement = document.querySelector(".clientOrder");
-  // Создаем новый элемент для добавленного товара
-  const productItem = document.createElement("div");
-  productItem.textContent = `${productName} - ${productPrice}$`;
-  // Добавляем элемент в блок clientOrder
-  clientOrderElement.append(productItem);
-};
+// // Функция для обновления содержимого блока clientOrder
+// const updateClientOrder = (productName, productPrice) => {
+//   const clientOrderElement = document.querySelector(".clientOrder");
+//   // Создаем новый элемент для добавленного товара
+//   const productItem = document.createElement("div");
+//   productItem.textContent = `${productName} - ${productPrice}$`;
+//   // Добавляем элемент в блок clientOrder
+//   clientOrderElement.append(productItem);
+// };
 
-// Добавляем обработчик события для каждой кнопки "Add to cart"
-addToCartButtons.forEach((button) => {
-  button.addEventListener("click", (event) => {
-    // Находим родительский элемент карточки товара
-    const productElement = event.target.closest(".content-item");
-    // Получаем данные о товаре из карточки
-    const productName = productElement.querySelector(".item-title").textContent;
-    const productPrice =
-      productElement.querySelector(".item-price").textContent;
-    updateCartCounter();
-    updateClientOrder(productName, productPrice);
-  });
-});
+// // Добавляем обработчик события для каждой кнопки "Add to cart"
+// addToCartButtons.forEach((button) => {
+//   button.addEventListener("click", (event) => {
+//     // Находим родительский элемент карточки товара
+//     const productElement = event.target.closest(".content-item");
+//     // Получаем данные о товаре из карточки
+//     const productName = productElement.querySelector(".item-title").textContent;
+//     const productPrice =
+//       productElement.querySelector(".item-price").textContent;
+//     updateCartCounter();
+//     updateClientOrder(productName, productPrice);
+//   });
+// });
+
+// 2 part
 
 // import { contentContainer } from "./cards.js";
 // import { getPrice, getDataPrice } from "./getTotalPrice.js";

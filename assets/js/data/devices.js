@@ -169,7 +169,7 @@ const products = [
     memory: "4GB",
     description:
       "4K Smart TV with crystal-clear image and wide range of colors.",
-    photo: "g",
+    photo: "",
     price: 699,
     color: "Black",
   },
