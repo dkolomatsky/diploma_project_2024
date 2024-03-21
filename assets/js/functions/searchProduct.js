@@ -2,6 +2,7 @@ import { products } from "../data/devices.js";
 import { createProductCard } from "./cards.js";
 import { contentContainer } from "./cards.js";
 import { renderProducts } from "./pagination.js";
+import { noResulstmassage } from "./showMessages.js";
 
 // Находим элементы формы поиска
 const searchInput = document.getElementById("search-input");
@@ -29,11 +30,8 @@ searchButton.addEventListener("click", (e) => {
 
     // делаем проверку если совпадений в поиске не найдено то вывдим сообщение или если найдено то отображаем их а если поле пустое то просто выводим карточки по умолчанию
     if (filteredProducts.length === 0) {
-      const noResulstmassage = document.createElement("div");
-
-      noResulstmassage.textContent = "По данному запросу ничего не найдено";
-      noResulstmassage.classList.add("noResulstmassage");
-      contentContainer.append(noResulstmassage);
+      // вызываем метод для сообщения о отсутствии результата
+      noResulstmassage();
     } else {
       // Отображаем отфильтрованные карточки товаров
       filteredProducts.forEach((product) => {
