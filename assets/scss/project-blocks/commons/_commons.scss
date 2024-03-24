@@ -1,4 +1,5 @@
-@use "../commons/variables" as *;
-body {
-  background-color: $color-light;
+@use '../commons/variables' as *;
+body
+{
+    background-color: $color-light;
 }

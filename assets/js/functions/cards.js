@@ -1,8 +1,4 @@
-import {
-  renderProducts,
-  renderPagination,
-  paginationHandler,
-} from "./pagination.js";
+import { renderProducts, paginationHandler } from "./pagination.js";
 import { products } from "../data/devices.js";
 
 // Доступ к родителю всех элемениов в карточке товара
@@ -70,23 +66,6 @@ const filterCards = (selectedValues) => {
       );
     });
   });
-
-  // переменная для хранения карочек с совпадениями с выбраными параметрами
-  const totalFilteredProductCards = filteredProducts.length;
-
-  // Если количество отфильтрованных карточек больше 9, добавляем пагинацию распределения карточек на страницы (макс 9 карточек на странице)
-  if (totalFilteredProductCards > 9) {
-    // Делим карточки на страницы по 9 карточек на странице
-    const pages = Math.ceil(totalFilteredProductCards / 9);
-    // Выводим только первые 9 карточек на первой странице
-    const firstPageProducts = filteredProducts.slice(0, 9);
-    renderProducts(1, firstPageProducts);
-    // Добавляем пагинацию для остальных страниц
-    renderPagination(pages);
-  } else {
-    // Если карточек меньше или равно 9, просто отображаем их
-    renderProducts(1, filteredProducts);
-  }
 
   // Очищаем контейнер перед добавлением отфильтрованных карточек
   contentContainer.innerHTML = "";

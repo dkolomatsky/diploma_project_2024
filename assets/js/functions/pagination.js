@@ -21,10 +21,6 @@ export const renderProducts = (page) => {
   });
 };
 
-export const renderPagination = () => {
-❌ после того как карточки отфильтровались по заданым параметрам надо реализовать логику распределения карочек по страницах 
-};
-
 export const paginationHandler = (e) => {
   e.preventDefault();
   // передаем в currentPage значение страницы которая выбрана

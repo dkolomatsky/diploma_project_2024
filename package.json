@@ -17,5 +17,9 @@
     "postcss-discard-comments": "^5.1.2",
     "sass": "^1.54.5",
     "sort-css-media-queries": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.19.1",
+    "path": "^0.12.7"
   }
 }

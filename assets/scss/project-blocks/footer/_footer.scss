@@ -1,5 +1,6 @@
-@use "../commons/variables" as *;
+@use '../commons/variables' as *;
 
-.page-footer {
-  background-color: rgba($color-light, 0.8);
+.page-footer
+{
+    background-color: rgba($color-light, .8);
 }

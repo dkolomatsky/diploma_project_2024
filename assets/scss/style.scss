@@ -1,19 +1,20 @@
-@use "../../libs/normalize.css/normalize";
+@use '../../libs/normalize.css/normalize';
 
 // стили блока commons
-@use "../scss/project-blocks/commons/commons";
-@use "../scss/project-blocks/commons/variables";
+@use '../scss/project-blocks/commons/commons';
+@use '../scss/project-blocks/commons/variables';
 
 // стили блока header
-@use "../scss/project-blocks/header/header";
-@use"../scss/project-blocks//header/carts";
+@use '../scss/project-blocks/header/header';
+@use'../scss/project-blocks//header/carts';
 
 // стили блока main
-@use "../scss/project-blocks/main/page-pagination";
-@use "../scss/project-blocks/main/content";
+@use '../scss/project-blocks/main/page-pagination';
+@use '../scss/project-blocks/main/content';
 
 // стили блока aside
-@use "../scss/project-blocks/aside/aside.scss";
+@use '../scss/project-blocks/aside/aside.scss';
 
 // стили блока footer
-@use "../scss/project-blocks/footer/footer"
+@use '../scss/project-blocks/footer/footer'
+
