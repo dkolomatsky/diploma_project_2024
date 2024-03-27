@@ -1,7 +1,6 @@
 import { contentContainer } from "./cards.js";
 
 const cartCounterLabel = document.getElementById("cart-counter-label");
-// const addToCartButtons = document.querySelectorAll(".item-actions__cart");
 
 let selectedItemsCounter = 0;
 

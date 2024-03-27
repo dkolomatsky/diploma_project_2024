@@ -3,7 +3,6 @@ import "./functions/cards.js";
 import "./functions/pagination.js";
 import "./functions/showExtraOptions.js";
 import "./functions/addCardsToCart.js";
-import "./functions/getTotalPrice.js";
 import "./functions/showCart.js";
 import "./functions/searchProduct.js";
 
@@ -36,29 +35,3 @@ _______________________________________________________________________________
 3. ❌ Реализовать подсчет общей суммы заказа (если выбрано несколько товаров или более 1шт одного товара)
 
 */
-
-// // доступ к кнопке для перехода в корзину
-// const pageHeaderCartBtn = document.querySelector(".page-header__cart-btn");
-// // доступ к блоку корзины
-// const cart = document.querySelector(".cart-container");
-
-// const btnClickHandler = (e) => {
-//   const target = e.target;
-
-//   if (e.target.classList.contains("item-actions__cart")) {
-//     cartCounterIncrement();
-//     // ваызовем метод итогового подсчета стоимости выбраных товаров
-//     const totalPrice = getDataPrice(target);
-//     // убираем непонятные дробные части в цене при сумировании
-//     cartPrice = getPrice();
-//     console.log(cartPrice);
-//   }
-// };
-
-// const showCart = () => {
-//   main.classList.add("display-hidden");
-//   cart.style.display = "block";
-// };
-
-// contentContainer.addEventListener("click", btnClickHandler);
-// pageHeaderCartBtn.addEventListener("click", showCart);
